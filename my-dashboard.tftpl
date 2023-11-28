@@ -1,0 +1,827 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "gnetId": 16413,
+  "graphTooltip": 0,
+  "id": 1001,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "testdata",
+        "uid": "${mydatasource-uid}"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 0,
+        "y": 0
+      },
+      "id": 24,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<img src=\"https://i.pinimg.com/originals/4f/f7/cf/4ff7cff89c8dfdd898080d3821af771d.jpg\">",
+        "mode": "html"
+      },
+      "pluginVersion": "10.2.0-62263",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "testdata",
+        "uid": "${mydatasource-uid}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 45
+              },
+              {
+                "color": "orange",
+                "value": 55
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 9,
+        "x": 5,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "displayMode": "lcd",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "valueMode": "color"
+      },
+      "pluginVersion": "10.2.0-62263",
+      "targets": [
+        {
+          "alias": "Web Replica 1",
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "min": 3,
+          "refId": "A",
+          "scenarioId": "random_walk",
+          "seriesCount": 1,
+          "startValue": 15
+        },
+        {
+          "alias": "Web Replica 2",
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "hide": false,
+          "min": 3,
+          "refId": "B",
+          "scenarioId": "random_walk",
+          "seriesCount": 1,
+          "startValue": 20
+        },
+        {
+          "alias": "Web Replica 3",
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "hide": false,
+          "min": 3,
+          "refId": "C",
+          "scenarioId": "random_walk",
+          "seriesCount": 1,
+          "startValue": 64
+        },
+        {
+          "alias": "Web Replica 4",
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "hide": false,
+          "min": 3,
+          "refId": "D",
+          "scenarioId": "random_walk",
+          "seriesCount": 1,
+          "startValue": 70
+        }
+      ],
+      "title": "Server Request Rates per Second",
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "testdata",
+        "uid": "${mydatasource-uid}"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 22,
+        "w": 10,
+        "x": 14,
+        "y": 0
+      },
+      "id": 11,
+      "links": [],
+      "maxDataPoints": 1,
+      "options": {
+        "basemap": {
+          "config": {},
+          "name": "Layer 0",
+          "type": "default"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": true,
+              "style": {
+                "color": {
+                  "field": "Value #Hits by Geolocation",
+                  "fixed": "dark-green"
+                },
+                "opacity": 0.4,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "field": "Value #Hits by Geolocation",
+                  "fixed": 5,
+                  "max": 40,
+                  "min": 3
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "location": {
+              "lookup": "geoip_country_code",
+              "mode": "lookup"
+            },
+            "name": "Layer 1",
+            "tooltip": true,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "zero",
+          "lat": 0,
+          "lon": 0,
+          "zoom": 1
+        }
+      },
+      "pluginVersion": "10.2.0-62263",
+      "targets": [
+        {
+          "csvContent": "\"Time\",\"geoip_country_code\",\"Value #Hits by Geolocation\"\r\n$__from,AE,11\r\n$__from,AL,1\r\n$__from,AO,4\r\n$__from,AP,7\r\n$__from,AT,3\r\n$__from,AU,18\r\n$__from,AZ,1\r\n$__from,BD,8\r\n$__from,BE,6\r\n$__from,BH,2\r\n$__from,BN,1\r\n$__from,BR,1\r\n$__from,BY,1\r\n$__from,CA,6713\r\n$__from,CH,3\r\n$__from,CN,3789\r\n$__from,CO,1\r\n$__from,CR,1\r\n$__from,CU,1\r\n$__from,CY,3626\r\n$__from,CZ,1\r\n$__from,DE,1058\r\n$__from,DK,1\r\n$__from,DO,4\r\n$__from,DZ,11\r\n$__from,EG,16\r\n$__from,ES,7\r\n$__from,ET,10\r\n$__from,EU,5\r\n$__from,FI,2\r\n$__from,FR,8\r\n$__from,GB,43\r\n$__from,GE,5\r\n$__from,GH,5\r\n$__from,GR,4\r\n$__from,HK,7\r\n$__from,HR,2\r\n$__from,HU,5\r\n$__from,IE,3\r\n$__from,IL,2\r\n$__from,IN,38\r\n$__from,IQ,5\r\n$__from,IR,3\r\n$__from,IT,16\r\n$__from,JO,1\r\n$__from,JP,6\r\n$__from,KE,1\r\n$__from,KH,4\r\n$__from,KR,4\r\n$__from,LB,2\r\n$__from,LT,2\r\n$__from,LV,1\r\n$__from,LY,2\r\n$__from,MA,4\r\n$__from,MD,2\r\n$__from,MN,1\r\n$__from,MU,2\r\n$__from,MX,1\r\n$__from,MY,4\r\n$__from,MZ,4\r\n$__from,NG,11\r\n$__from,NL,3550\r\n$__from,NO,2\r\n$__from,NP,5\r\n$__from,NZ,8\r\n$__from,OM,1\r\n$__from,PE,1\r\n$__from,PH,22\r\n$__from,PK,29\r\n$__from,PL,13\r\n$__from,PT,3\r\n$__from,QA,2\r\n$__from,RE,1\r\n$__from,RO,2\r\n$__from,RS,1\r\n$__from,RU,906\r\n$__from,SE,6\r\n$__from,SG,1234\r\n$__from,SI,1\r\n$__from,SK,1\r\n$__from,SY,1\r\n$__from,TN,2\r\n$__from,TR,19\r\n$__from,TW,3\r\n$__from,TZ,6\r\n$__from,UA,7\r\n$__from,UG,1\r\n$__from,US,8850\r\n$__from,UY,1\r\n$__from,VE,1\r\n$__from,VN,19\r\n$__from,ZA,14\r\n$__from,ZM,3\r\n$__from,ZW,5",
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "refId": "A",
+          "scenarioId": "csv_content"
+        }
+      ],
+      "title": "Customer  Activity",
+      "transformations": [],
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "testdata",
+        "uid": "${mydatasource-uid}"
+      },
+      "description": "we will turn this into a polystat",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "index": 1,
+                  "text": "DOWN"
+                },
+                "1": {
+                  "index": 0,
+                  "text": "UP"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "orange",
+                "value": null
+              },
+              {
+                "color": "blue",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 5,
+        "x": 0,
+        "y": 5
+      },
+      "id": 7,
+      "links": [],
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": true
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.2.0-62263",
+      "targets": [
+        {
+          "alias": "",
+          "csvContent": "\"Time\",\"__name__\",\"app\",\"cluster\",\"container\",\"instance\",\"job\",\"namespace\",\"pod\",\"Value\"\r\n$__from,up,sockshop,se-demo-cluster,carts,carts-696c79c787-4ch5w:carts:http-metrics,development/carts,development,carts-696c79c787-4ch5w,1\r\n$__from,up,sockshop,se-demo-cluster,catalogue,catalogue-79ff77d774-75wxd:catalogue:http-metrics,development/catalogue,development,catalogue-79ff77d774-75wxd,1\r\n$__from,up,sockshop,se-demo-cluster,front-end,front-end-57847c7474-jc65q:front-end:http-metrics,development/front-end,development,front-end-57847c7474-jc65q,0\r\n$__from,up,sockshop,se-demo-cluster,orders,orders-57777676dc-5255w:orders:http-metrics,development/orders,development,orders-57777676dc-5255w,1\r\n$__from,up,sockshop,se-demo-cluster,payment,payment-5c88cf8fdc-86zfp:payment:http-metrics,development/payment,development,payment-5c88cf8fdc-86zfp,1\r\n$__from,up,sockshop,se-demo-cluster,queue-master,queue-master-748566765-7vzlb:queue-master:http-metrics,development/queue-master,development,queue-master-748566765-7vzlb,0\r\n$__from,up,sockshop,se-demo-cluster,shipping,shipping-65668bd98b-nz82b:shipping:http-metrics,development/shipping,development,shipping-65668bd98b-nz82b,1\r\n$__from,up,sockshop,se-demo-cluster,user,user-7fdcd646dc-xvjjv:user:http-metrics,development/user,development,user-7fdcd646dc-xvjjv,1",
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "refId": "A",
+          "scenarioId": "csv_content"
+        }
+      ],
+      "title": "K8s Service Status",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true,
+              "__name__": true,
+              "app": true,
+              "cluster": true,
+              "instance": true,
+              "job": true,
+              "namespace": true,
+              "pod": true
+            },
+            "indexByName": {},
+            "renameByName": {}
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "testdata",
+        "uid": "${mydatasource-uid}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "A-series"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "{job=\"development/carts\"}"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "B-series"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "{job=\"development/catalogue\"}"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "C-series"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "{job=\"development/orders\"}"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "D-series"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "{job=\"development/payments\"}"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "E-series"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "{job=\"development/shipping\"}"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "F-series"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "{job=\"development/users\"}"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{job=\"development/users\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 9,
+        "x": 5,
+        "y": 8
+      },
+      "id": 23,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "10.2.0-59882",
+      "targets": [
+        {
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "hide": false,
+          "max": 21,
+          "min": 17.5,
+          "refId": "A",
+          "scenarioId": "random_walk",
+          "seriesCount": 1,
+          "startValue": 18
+        },
+        {
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "hide": false,
+          "max": 7.5,
+          "min": 5,
+          "noise": 0.2,
+          "refId": "B",
+          "scenarioId": "random_walk",
+          "seriesCount": 1,
+          "spread": 0.4,
+          "startValue": 5
+        },
+        {
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "hide": false,
+          "max": 34,
+          "min": 24,
+          "noise": 0.4,
+          "refId": "C",
+          "scenarioId": "random_walk",
+          "seriesCount": 1,
+          "spread": 0.5,
+          "startValue": 25
+        },
+        {
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "hide": false,
+          "max": 4.8,
+          "min": 4.65,
+          "refId": "D",
+          "scenarioId": "random_walk",
+          "seriesCount": 1,
+          "spread": 0.001,
+          "startValue": 4.7
+        },
+        {
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "hide": false,
+          "max": 4.8,
+          "min": 4.65,
+          "noise": 0.001,
+          "refId": "E",
+          "scenarioId": "random_walk",
+          "seriesCount": 1,
+          "spread": 0.001,
+          "startValue": 4.6
+        },
+        {
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "hide": false,
+          "max": 8,
+          "min": 4.9,
+          "noise": 0.001,
+          "refId": "F",
+          "scenarioId": "random_walk",
+          "seriesCount": 1,
+          "spread": 1,
+          "startValue": 5
+        }
+      ],
+      "title": "Latency for Sockshop App",
+      "transformations": [],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "testdata",
+        "uid": "${mydatasource-uid}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "from": 0,
+                "result": {
+                  "color": "blue",
+                  "index": 0,
+                  "text": "OK"
+                },
+                "to": 1
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 1,
+                "result": {
+                  "color": "yellow",
+                  "index": 1,
+                  "text": "Degraded"
+                },
+                "to": 2
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 2,
+                "result": {
+                  "color": "orange",
+                  "index": 2,
+                  "text": "SLO Violation"
+                },
+                "to": 100
+              },
+              "type": "range"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 5,
+        "x": 0,
+        "y": 13
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.2.0-62263",
+      "targets": [
+        {
+          "alias": "Ashburn",
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "drop": 0,
+          "hide": false,
+          "max": 1.7,
+          "min": 0,
+          "noise": 0,
+          "refId": "B",
+          "scenarioId": "random_walk",
+          "spread": 0.3
+        },
+        {
+          "alias": "N. California",
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "drop": 0,
+          "hide": false,
+          "max": 0.5,
+          "min": 0,
+          "noise": 0,
+          "refId": "A",
+          "scenarioId": "random_walk",
+          "spread": 0.1
+        },
+        {
+          "alias": "London",
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "drop": 0,
+          "hide": false,
+          "max": 1.5,
+          "min": 0,
+          "noise": 0,
+          "refId": "C",
+          "scenarioId": "random_walk",
+          "spread": 0.3
+        },
+        {
+          "alias": "Frankfurt",
+          "datasource": {
+            "type": "testdata",
+            "uid": "${mydatasource-uid}"
+          },
+          "drop": 0,
+          "hide": false,
+          "max": 1.5,
+          "min": 0,
+          "noise": 0,
+          "refId": "D",
+          "scenarioId": "random_walk",
+          "spread": 0.1
+        }
+      ],
+      "title": "Error Rates",
+      "type": "stat"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 38,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "My Terraform-deployed dashboard",
+  "uid": "ac6893d7-2ddc-4eb2-b159-8558f34ce3e4",
+  "version": 1,
+  "weekStart": ""
+}
