@@ -38,7 +38,7 @@ You can set Terraform the way you want. If you never did that, here are the step
 ## Create a Service Account token for your Grafana
 
 1. Go to the Service Account page: go to your Grafana instance, open the menu and click on Administration > Services Account
-2. Create a new Service Account with permissions on folders, datasources and dashboards
+2. Create a new Service Account with permissions on folders, datasources, alerts and dashboards
 3. Create a new token for this Service Account. As best practice, use an expiration date. Copy the token, it is not possible to display it later.
 
 ## Deploy to your Grafana
@@ -50,15 +50,16 @@ We will deploy:
 
 To do that, use the following command:
 
-    terraform apply -var 'grafana_url=<CHANGE ME>' -var 'my_token=<CHANGE ME>'
+    terraform apply -var 'grafana_url=<CHANGE ME>' -var 'my_token=<CHANGE ME>' -var 'my_email=<CHANGE ME>'
 
 Terraform will ask you to confirm. Type `yes`.
 
 Replace the values for `grafana_url` and `my_token` with the right values for your environment:
 - `grafana_url` should look like *https://mystack.grafana.net/* in Grafana Cloud (or other domains if you use OSS or Enterprise)
 - `my_token` is the API token you created
+- `my_email` is the email address to receive alerts (don't worry, the alert rule never fires in this example)
 
-You can now visit your instance and check that the folder and dashboard are present.
+You can now visit your instance and check that the folder, dashboard, and alerts are present.
 
 > You may found no data in your dashboard when opening it. You need to reload the page as your browser cache prevents the webapp to use the new datasource.
 
