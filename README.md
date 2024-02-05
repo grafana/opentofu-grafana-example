@@ -47,6 +47,7 @@ We will deploy:
 - A folder
 - A datasource (we use Test Data, ensure it's installed on your Grafana)
 - A dashboard
+- An alert
 
 To do that, use the following command:
 
