@@ -16,7 +16,7 @@
   <img alt="Static Badge" style="border-radius:16px" src="https://img.shields.io/badge/GRAFANA-F46800?style=for-the-badge&logo=grafana&logoColor=white">
   <img alt="Static Badge" style="border-radius:16px" src="https://img.shields.io/badge/OPENTOFU-FFDA18?style=for-the-badge&logo=opentofu&logoColor=white">
   <p align="center">
-    Learn by doing. Create a datasource, a folder and import dahsboards in it with panels using this datasource. You can copy this and customize it to make much more using the <a href="https://registry.OpenTofu.io/providers/grafana/grafana/latest/docs">Grafana provider</a>.
+    Learn by doing. Create a datasource, a folder and import dahsboards in it with panels using this datasource. You can copy this and customize it to make much more using the Grafana provider.
   </p>
 </div>
 
