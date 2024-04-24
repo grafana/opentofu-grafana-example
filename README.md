@@ -12,11 +12,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Terraform + Grafana: Example tutorial</h3>
+  <h3 align="center">OpenTofu (open-source Terraform fork) + Grafana: Example tutorial</h3>
   <img alt="Static Badge" style="border-radius:16px" src="https://img.shields.io/badge/GRAFANA-F46800?style=for-the-badge&logo=grafana&logoColor=white">
-  <img alt="Static Badge" style="border-radius:16px" src="https://img.shields.io/badge/TERRAFORM-844FBA?style=for-the-badge&logo=terraform&logoColor=white">
+  <img alt="Static Badge" style="border-radius:16px" src="https://img.shields.io/badge/OPENTOFU-FFDA18?style=for-the-badge&logo=opentofu&logoColor=white">
   <p align="center">
-    Learn by doing. Create a datasource, a folder and import dahsboards in it with panels using this datasource. You can copy this and customize it to make much more using the <a href="https://registry.terraform.io/providers/grafana/grafana/latest/docs">Grafana provider</a>.
+    Learn by doing. Create a datasource, a folder and import dahsboards in it with panels using this datasource. You can copy this and customize it to make much more using the <a href="https://registry.OpenTofu.io/providers/grafana/grafana/latest/docs">Grafana provider</a>.
   </p>
 </div>
 
@@ -28,12 +28,12 @@ Create a Grafana Cloud Free account. **No credit card** required.
 
 ---
 
-## Set your Terraform
+## Set your OpenTofu
 
-You can set Terraform the way you want. If you never did that, here are the steps you can follow:
+You can set OpenTofu the way you want. If you never did that, here are the steps you can follow:
 
-1. Install Terraform using the [official documentation](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) for your environment.
-2. Initialize Terraform by running `terraform init`
+1. Install OpenTofu using the [official documentation](https://opentofu.org/docs/intro/install/) for your environment.
+2. Initialize OpenTofu by running `tofu init`
 
 ## Create a Service Account token for your Grafana
 
@@ -51,9 +51,9 @@ We will deploy:
 
 To do that, use the following command:
 
-    terraform apply -var 'grafana_url=<CHANGE ME>' -var 'my_token=<CHANGE ME>' -var 'my_email=<CHANGE ME>'
+    tofu apply -var 'grafana_url=<CHANGE ME>' -var 'my_token=<CHANGE ME>' -var 'my_email=<CHANGE ME>'
 
-Terraform will ask you to confirm. Type `yes`.
+OpenTofu will ask you to confirm. Type `yes`.
 
 Replace the values for `grafana_url` and `my_token` with the right values for your environment:
 - `grafana_url` should look like *https://mystack.grafana.net/* in Grafana Cloud (or other domains if you use OSS or Enterprise)
@@ -70,7 +70,7 @@ As Code is great because cleaning up your tests are also very fast !
 
 With the same values, run:
 
-    terraform destroy -var 'grafana_url=<CHANGE ME>' -var 'my_token=<CHANGE ME>'
+    tofu destroy -var 'grafana_url=<CHANGE ME>' -var 'my_token=<CHANGE ME>'
 
 To fully cleanup the environment, you can also remove the Service Account you created manually.
 
@@ -81,6 +81,7 @@ To fully cleanup the environment, you can also remove the Service Account you cr
 
 Some useful ressources from Grafana Labs and friends:
 
+* [OpenTofu Manifesto](https://opentofu.org/manifesto/)
 * [Grafana Grizzly: CLI for Observability as Code](https://grafana.github.io/grizzly/)
 * [Web Shop O11y demo](https://github.com/Condla/web-shop-o11y-demo)
 * [On demand videos and webinars](https://grafana.com/videos/)

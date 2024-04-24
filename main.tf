@@ -19,7 +19,7 @@ provider "grafana" {
 ### DATASOURCE
 ##############
 resource "grafana_data_source" "my_datasource" {
-  name = "My Terraform Datasource"
+  name = "My OpenTofu Datasource"
   type = "grafana-testdata-datasource"
 }
 
